@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Running post-commit script"
+git pull
+git push origin master
