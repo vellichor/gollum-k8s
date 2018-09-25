@@ -36,7 +36,7 @@ DO install this secret into your Kubernetes cluster:
 
 `kubectl --namespace gollum create -f gollum-git-secret.yml`
 
-5. OPTIONAL -- if you want to use a custom Docker image, now's the time. Create your remote Docker repo and replace the value of the Gollum container image in `deployments/gollum.yml`. Don't forget to create your image pull secret and add it to the deployment -- if you got this far we will assume you know how to do that.
+5. OPTIONAL -- if you want to use a custom Docker image, now's the time. Create your remote Docker repo and replace the value of the Gollum container image in `deployments/gollum.yml`. If your remote Docker repo is private, don't forget to create your image pull secret and add it to the deployment -- if you got this far I will assume you know how to do that.
 
 6. Create the actual replicaset. Sanity check before doing this to make sure you have a valid container image, have set the environment variable GOLLUM_GIT_REPO to the repository you created in step 1, and you've set your image pull secret if needed. Then:
 
