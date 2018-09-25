@@ -1,6 +1,6 @@
 #!/bin/bash
 # WD must be git repo
-pushd /wiki-data
-git pull
-git push
-popd
+pushd /wiki-data > /dev/null
+git pull -q
+git push -q
+popd > /dev/null
