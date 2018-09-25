@@ -1,1 +1,2 @@
-* * * * * /bin/git-sync.sh >> /var/log/cron.log 2>&1
+* * * * * root /bin/git-sync.sh >> /var/log/cron.log 2>&1
+# do not remove comment to avoid newline suppression
