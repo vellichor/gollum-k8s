@@ -22,6 +22,7 @@ RUN chmod +x /var/share/gollum/post-commit
 # crontab to sync (push/pull) every minute.
 # INIT SCRIPT MUST START CRON.
 COPY scripts/crontab /var/share/gollum
+RUN chmod +x /var/share/gollum/crontab
 RUN touch /var/log/cron.log
 
 # WD should be the mountpoint for the git volume
