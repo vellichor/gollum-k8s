@@ -5,6 +5,7 @@ RUN gem install gollum
 RUN gem install org-ruby  # optional
 
 # we have a known public key for github. tell our hosts about it.
+RUN mkdir -p /root/.ssh
 COPY github_rsa.pub .
 RUN cat github_rsa.pub >> /root/.ssh/known_hosts
 

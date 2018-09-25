@@ -18,7 +18,7 @@ spec:
       terminationGracePeriodSeconds: 1800
       containers:
       - name: gollum
-        image: quay.io/vellichor/gollum:master
+        image: quay.io/vellichor/gollum-k8s:master
         imagePullPolicy: Always
         ports:
         - containerPort: 80
