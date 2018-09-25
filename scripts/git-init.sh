@@ -23,5 +23,6 @@ cp /var/share/gollum/post-commit .git/hooks/post-commit
 # start cron and poll for changes every minute.
 cron
 # cron only installs a new crontab when this directory changes,
-# so move the script AFTER cron starts or nothing will happen.
+# so move the script AFTER cron has started or nothing will happen.
+sleep 5
 cp /var/share/gollum/crontab /etc/cron.d/git-sync-cron
